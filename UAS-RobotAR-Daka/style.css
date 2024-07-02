@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('assets/Background.jpg');
+    background-size: cover;
+}
+
+h1 {
+    margin-top: 50px;
+    color: azure;
+    }
+
+h3 {
+    margin-top: 2px;
+    color: azure;
+    }
+
+/* Splash Screen */
+.splash {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.splash img {
+    width: 80%;
+    max-width: 80%;
+    height: auto;
+}
+
+/* Dashboard */
+.dashboard {
+    text-align: center;
+    padding: 2em;
+}
+
+.dashboard .menu {
+    margin-top: 2em;
+}
+
+.title {
+    text-align: center;
+}
+.dashboard .btn {
+    display: block;
+    padding: 1em 2em;
+    margin: 0.5em 1em;
+    background-color: #184dfbc4;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 0.5em;
+}
+
+ol {
+    background-color: #184dfb92;
+    padding: 15px;
+    margin: auto;
+    color: #ffffff;
+    text-align: center;
+    display: block;
+    border-radius: 15px; /* Membuat siku tumpul */
+    max-width: 600px; /* Membatasi lebar maksimal */
+  }
+
+  ol p {
+    margin: 0px; /* Merapatkan jarak antar paragraf */
+    color: azure;
+    text-align: center;
+}
+
+p {
+    margin-top: 0px;
+    color: azure;
+    text-align: center;
+}
+
+  .back-btn {
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    background-color: #184dfbc4;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+
+/* About Page */
+.about {
+    text-align: center;
+    padding: 2em;
+}
+
+p {
+    margin-top: 50px;
+    color: azure;
+    text-align: center;
+}

@@ -1,0 +1,114 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <!-- the folllowing script is needed to animate gltf files -->
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v7.2.0/dist/aframe-extras.min.js"></script>
+    <!-- MindAR library -->
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+    <style>
+       .back-btn {
+        position: fixed;
+    bottom: 25px;
+    left: 25px;
+    background-color: #184dfbc4;
+    color: white;
+    padding: 10px;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 1000; /* Ensure it's above other content */
+}
+ 
+    </style>
+</head>
+<body>
+    <a-scene mindar-image="imageTargetSrc: ./marker/robots.mind; maxTrack: 3" color-space="sRGB"
+        renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false"
+        device-orientation-permission-ui="enabled: false">
+        <a-assets>
+            <!-- Card Images -->
+            <img id="robot1Card" src="./marker/AR Tracking Card-JPG/robot1.jpg"></img>
+            <img id="robot2Card" src="./marker/AR Tracking Card-JPG/robot2.jpg"></img>
+            <img id="robot3Card" src="./marker/AR Tracking Card-JPG/robot3.jpg"></img>
+            <img id="robot4Card" src="./marker/AR Tracking Card-JPG/robot4.jpg"></img>
+            <img id="robot5Card" src="./marker/AR Tracking Card-JPG/robot5.jpg"></img>
+            <img id="robot6Card" src="./marker/AR Tracking Card-JPG/robot6.jpg"></img>
+            <img id="robot7Card" src="./marker/AR Tracking Card-JPG/robot7.jpg"></img>
+            <img id="robot8Card" src="./marker/AR Tracking Card-JPG/robot8.jpg"></img>
+            <img id="robot9Card" src="./marker/AR Tracking Card-JPG/robot9.jpg"></img>
+            <img id="robot10Card" src="./marker/AR Tracking Card-JPG/robot10.jpg"></img>
+            
+            <!-- 3D Models -->
+            <a-asset-item id="robot1Model" src="./assets/robots/robot1/scene.gltf"></a-asset-item>
+            <a-asset-item id="robot2Model" src="./assets/robots/robot2/scene.gltf"></a-asset-item>
+            <a-asset-item id="robot3Model" src="./assets/robots/robot3/scene.gltf"></a-asset-item>
+            <a-asset-item id="robot4Model" src="./assets/robots/robot4/scene.gltf"></a-asset-item>
+            <a-asset-item id="robot5Model" src="./assets/robots/robot5/scene.gltf"></a-asset-item>
+            <a-asset-item id="robot6Model" src="./assets/robots/robot-unicycle/scene.gltf"></a-asset-item>
+            <a-asset-item id="robot7Model" src="./assets/robots/robot7/robot7.gltf"></a-asset-item>
+            <a-asset-item id="robot8Model" src="./assets/robots/robotyellow/scene.gltf"></a-asset-item>
+            <a-asset-item id="robot9Model" src="./assets/robots/the_big_bongis/scene.gltf"></a-asset-item>
+            <a-asset-item id="robot10Model" src="./assets/robots/robot10/scene.gltf"></a-asset-item>
+        </a-assets>
+        <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+        <a-entity mindar-image-target="targetIndex: 0">
+            <a-plane src="#robot1Card" position="0 0 0" height="0.552" width="1" rotation="0 0 0">
+                <!-- animation-mixer diperlukan untuk menjalankan animasi pada model 3d (jika tersedia) -->
+                <a-gltf-model rotation="-45 -90 -90" position="0 -0.25 0.1" scale="0.075 0.075 0.075" src="#robot1Model" animation-mixer></a-gltf-model>
+            </a-plane>
+            
+        </a-entity>
+        <a-entity mindar-image-target="targetIndex: 1">
+            <a-plane src="#robot2Card" position="0 0 0" height="0.552" width="1" rotation="0 0 0">
+                <a-gltf-model rotation="90 0 0" position="0 0 0" scale="0.0025 0.0025 0.0025" src="#robot2Model" animation-mixer></a-gltf-model>
+            </a-plane>
+        </a-entity>
+        <a-entity mindar-image-target="targetIndex: 2">
+            <a-plane src="#robot3Card" position="0 0 0" height="0.552" width="1" rotation="0 0 0">
+                <a-gltf-model rotation="90 0 0" position="0 0 0" scale="0.0025 0.0025 0.0025" src="#robot3Model" animation-mixer></a-gltf-model>
+            </a-plane>
+        </a-entity>
+        <a-entity mindar-image-target="targetIndex: 3">
+            <a-plane src="#robot4Card" position="0 0 0" height="0.552" width="1" rotation="0 0 0">
+                <a-gltf-model rotation="90 0 0" position="0 0 0" scale="0.0025 0.0025 0.0025" src="#robot4Model" animation-mixer></a-gltf-model>
+            </a-plane>
+        </a-entity>
+        <a-entity mindar-image-target="targetIndex: 4">
+            <a-plane src="#robot5Card" position="0 0 0" height="0.552" width="1" rotation="0 0 0">
+                <a-gltf-model rotation="90 0 0" position="0 0 0.25" scale="0.015 0.015 0.015" src="#robot5Model" animation-mixer></a-gltf-model>
+            </a-plane>
+        </a-entity>
+        <a-entity mindar-image-target="targetIndex: 5">
+            <a-plane src="#robot6Card" position="0 0 0" height="0.552" width="1" rotation="0 0 0">
+                <a-gltf-model rotation="90 0 0" position="0 0.1 0" scale="0.01 0.01 0.01" src="#robot6Model" animation-mixer></a-gltf-model>
+            </a-plane>
+        </a-entity>
+        <a-entity mindar-image-target="targetIndex: 6">
+            <a-plane src="#robot7Card" position="0 0 0" height="0.552" width="1" rotation="0 0 0">
+                <!-- key 'clip' pada 'animation-mixer' menentukan animasi apa yang dijalankan, jika dikosongkan yang dipakai adalah default -->
+                <a-gltf-model rotation="-90 -90 -90" position="0 0 0" scale="0.075 0.075 0.075" src="#robot7Model" animation-mixer="clip: attackspinlonghands"></a-gltf-model>
+            </a-plane>
+        </a-entity>
+        <a-entity mindar-image-target="targetIndex: 7">
+            <a-plane src="#robot8Card" position="0 0 0" height="0.552" width="1" rotation="0 0 0">
+                <a-gltf-model rotation="90 0 0" position="0 0 0.5" scale="0.5 0.5 0.5" src="#robot8Model" animation-mixer></a-gltf-model>
+            </a-plane>
+        </a-entity>
+        <a-entity mindar-image-target="targetIndex: 8">
+            <a-plane src="#robot9Card" position="0 0 0" height="0.552" width="1" rotation="0 0 0">
+                <a-gltf-model rotation="90 0 0" position="0 0 0" scale="0.025 0.025 0.025" src="#robot9Model" animation-mixer></a-gltf-model>
+            </a-plane>
+        </a-entity>
+        <a-entity mindar-image-target="targetIndex: 9">
+            <a-plane src="#robot10Card" position="0 0 0" height="0.552" width="1" rotation="0 0 0">
+                <a-gltf-model rotation="90 0 0" position="0 0 0.2" scale="0.025 0.025 0.025" src="#robot10Model" animation-mixer></a-gltf-model>
+            </a-plane>
+        </a-entity>
+        
+        </a-scene>
+        <a href="dashboard.html" class="back-btn">Back</a>
+        <div id="UI">Marker information here.</div>
+      </body>
+
+</html>
